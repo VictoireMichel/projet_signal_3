@@ -1,7 +1,9 @@
+
+
 const { createWorker } = require('tesseract.js')
 const PSM = require('tesseract.js/src/constants/PSM.js')
 const worker = createWorker()
-const image = './images/test.png'
+const image = './images/newCadran.png'
 
 
 
@@ -12,11 +14,9 @@ async function getTextFromImage() {
 
 
     await worker.setParameters({
-        tessedit_pageseg_mode: PSM.AUTO, // mode auto pour la segmentation de la page -> ici recherche toutes les lignes
+        tessedit_pageseg_mode: PSM.CIRCLE_WORD, // traite l'image en tant qu'un seul mot -> meilleure solution pour nous
         tessedit_char_whitelist: '0123456789',
     })
-
-
 
 
 
