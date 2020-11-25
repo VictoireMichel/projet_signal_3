@@ -1,5 +1,5 @@
 cadranTest = rgb2gray(imread("linky.png"));
-limit = 180;
+limit = 200;
 sizeCadran = size(cadranTest);
 for i = 1:sizeCadran(1)
     for j = 1:sizeCadran(2)
@@ -10,5 +10,8 @@ for i = 1:sizeCadran(1)
         end
     end
 end
+
+figure;
+imshow(cadranTest);
 
 imwrite(cadranTest, "newTestLinky.png");
