@@ -11,7 +11,8 @@ for i = 1:sizeCadran(1)
     end
 end
 
-figure;
+subplot(111);
 imshow(cadranTest);
+title("résultat");
 
 imwrite(cadranTest, "newTestLinky.png");

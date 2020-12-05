@@ -1,4 +1,8 @@
 cadranTest = imread("cadran.png");
+subplot(211);
+imshow(cadranTest);
+title("cadran de base");
+
 limit = 128;
 sizeCadran = size(cadranTest);
 for i = 1:sizeCadran(1)
@@ -11,7 +15,8 @@ for i = 1:sizeCadran(1)
     end
 end
 
-figure;
+subplot(212);
 imshow(cadranTest);
+title("résultat");
 
 imwrite(cadranTest, "newCadran.png");
