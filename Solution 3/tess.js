@@ -1,7 +1,7 @@
 const { createWorker } = require('tesseract.js')
 const PSM = require('tesseract.js/src/constants/PSM.js')
 const worker = createWorker()
-const image = './t.png'
+const image = './testErosion.png'
 
 async function getTextFromImage() {
     await worker.load()
@@ -22,6 +22,9 @@ async function getTextFromImage() {
 }
 
 getTextFromImage()
-    .then(console.log)
+    .then(function(text){
+        let txtF = text.substring(0, text.length - 3) + "." + text.substring(text.length - 2, text.length -1);
+        console.log(txtF);
+    });
 
 
