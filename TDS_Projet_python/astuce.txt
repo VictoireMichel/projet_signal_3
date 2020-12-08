@@ -1,0 +1,18 @@
+
+sudo apt install tesseract-ocr
+
+virtualenv venv
+source venv/bin/activate
+deactivate
+
+
+pip install tesseract
+pip install pillow
+pip install pytesseract
+pip2 install opencv-python==4.2.0.32
+
+
+-rogner automatiquement juste le compteur
+-ajuster l'opacité en fonctione de la couleur de l'image
+-n'afficher que les chiffres et non les "(" etc.
+-afficher une virgules après le dernier point
